@@ -1,3 +1,3 @@
 # ShaderScratch
 
-Shadertoy (Scratch's version)
+Shadertoy (Scratch version)
