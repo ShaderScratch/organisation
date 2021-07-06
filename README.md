@@ -1,3 +1,3 @@
 # ShaderScratch
 
-Organisation Readme test
+Shadertoy (Scratch's version)
