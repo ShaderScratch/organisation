@@ -54,4 +54,4 @@ Now, running `npm install` in scratch-blocks again should finish without errors 
 
 Now that all four repositories are successfully installed, the only thing remaining to do is telling npm to use the code from all of those folders in scratch-gui, so our local changes to all of those repositories can be seen and tested there.
 
-To do this, just run `npm link` in scratch-blocks, scratch-vm and scratch-render each; then, navigate to scratch-gui and run `npm link scratch-blocks scratch-vm scratch-render` there. Now, running `npm start` again should show you all of your changes on [localhost:8601](http://localhost:8601).
+To do this, just run `npm link` in scratch-blocks, scratch-vm and scratch-render each; then, navigate to scratch-gui and run `npm link scratch-blocks`, `npm link scratch-vm` and `npm link scratch-render` there. Now, running `npm start` again should show you all of your changes on [localhost:8601](http://localhost:8601).
