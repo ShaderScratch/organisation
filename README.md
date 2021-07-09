@@ -18,7 +18,7 @@ First of, you'll need [node.js](https://nodejs.org/en/) to run this, so head ove
 
 ![Node_Setup](https://user-images.githubusercontent.com/43812953/125100051-f7ce9200-e0d8-11eb-8582-e43a42b608ef.png)
 
-This will install a few different tools required by some node.js-packages, it seems, including the latest version of python 3. You'll also need [python 2](https://www.python.org/downloads/release/python-2716/) however, as the build script for scratch-blocks is not compatible with python 3. So, install that too, add the installation folder to your windows path (if you know linux, idk, you'll have to figure something out yourself) and rename the `python.exe` file there to `python2.exe` so you'll then be able to use python 3 as `python` and python 2 as `python2` in the command line:
+This will install a few different tools required by some npm packages, it seems, including the latest version of python 3. You'll also need [python 2](https://www.python.org/downloads/release/python-2716/) however, as the build script for scratch-blocks is not compatible with python 3. So, install that too, add the installation folder to your windows path (if you use linux, idk, you'll have to figure something out yourself) and rename the `python.exe` file there to `python2.exe` so you'll then be able to use python 3 as `python` and python 2 as `python2` in the command line:
 ![grafik](https://user-images.githubusercontent.com/43812953/125101773-e2f2fe00-e0da-11eb-8049-ae8ca131584b.png)
 
 ## installing
@@ -40,7 +40,7 @@ To fix this, open `package.json` in that folder and replace `python` with `pytho
 
 ![grafik](https://user-images.githubusercontent.com/43812953/125106317-cb6a4400-e0df-11eb-80f6-5dd2e8fdb43a.png)
 
-This is because the total length of the arguments passed to some sort of subprocess or something exceeds 8 kilobytes here, which is the maximum length a command can have in windows (it should work fine on linux though I think, so if you use that you can probably skip this step). We can fix this by replacing all occurences of `node_modules\google-closure-library` with a shorter path to a symlink - that will bring the length back down below the limit. To do this, run the following command in the main folder you cloned the repositories into:
+This is because the total length of the arguments passed to some sort of subprocess or something here exceeds 8 kilobytes, which is the maximum length a command can have in windows (it should work fine on linux though I think, so if you use that you can probably skip this step). We can fix this by replacing all occurences of `node_modules\google-closure-library` with a shorter path to a symlink - that will bring the length back down below the limit. To do this, run the following command in the main folder you cloned the repositories into:
 
     mklink /D cl scratch-blocks\node_modules\google-closure-library
 
